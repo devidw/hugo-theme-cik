@@ -1,4 +1,7 @@
-# Content first Hugo Theme
+<h1 align=center>
+    👑 <br>
+    Hugo Theme: Content is King
+</h1>
 
 ## Installation
 1. Install dependecies
