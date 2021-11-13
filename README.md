@@ -1,6 +1,4 @@
-<p align=center>
-    👑
-</p>
+<p align=center>👑</p>
 <h1 align=center>
     Hugo Theme: Content is King
 </h1>
@@ -68,3 +66,5 @@ noindex: true
 * excludes via `robots.txt`
 * excludes from `sitemap.xml`
 * excludes from RSS feed
+
+<p align=center>👑</p>
