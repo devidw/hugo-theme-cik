@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ $posts := where .Site.RegularPages "Section" "not in" ("") }}
+
+{{ range (.Paginate $posts).Pages }}
+{{ .Render "summary" }}
+{{ end }}
+
+{{ template "_internal/pagination.html" . }}    
+
+{{ end }}

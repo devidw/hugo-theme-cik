@@ -1,0 +1,21 @@
+body.single
+
+    article
+        & > footer
+            margin-top: 5vh
+            text-align: right
+
+            span
+                color: var(--color-body-txt-transparentize-4)
+            
+            time
+                color: var(--color-body-txt-transparentize-6)
+
+            img
+                @media (min-width: $breakpoint)
+                    width: 50%
+                    margin-right: -20%
+                    margin-bottom: -1.5rem
+
+            figcaption
+                line-height: 1

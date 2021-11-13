@@ -1,0 +1,27 @@
+<article {{with .Params.Lang}}lang="{{.}}" {{end}}>
+    <header>
+        <h2>
+            {{ with .Params.Lang }}
+            {{ index $.Site.Data.flags.flags . }}
+            {{ end }}
+            <a href="{{.Permalink}}" title="{{.Title}}" rel="bookmark" {{with .Params.Lang}}hreflang="{{.}}" {{end}}>
+                {{.Title}}
+            </a>
+        </h2>
+    </header>
+    <div>
+        {{ with .PublishDate }}
+        <span class=date>
+            {{ partial "func/date" . }}
+            —
+        </span>
+        {{ end }}
+        <span>
+            {{ if .Description }}
+            {{ .Description }}
+            {{ else }}
+            {{ .Summary | truncate 160 "…" }}
+            {{ end }}
+        </span>
+    </div>
+</article>

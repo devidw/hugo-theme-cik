@@ -1,0 +1,40 @@
+ul.pagination
+    text-align: center
+    margin-top: 10vh
+    margin-bottom: 25vh
+
+    li
+        display: inline-block
+
+        a
+            display: inline-block
+            background: var(--color-body-txt-transparentize-9)
+            padding: .25em .75em
+            border-radius: .25em
+            border-radius: calc(1em + .25em * 2)
+
+        &:not(:first-child):not(:last-child)
+            a
+
+        & + li
+            margin-left: 0.5em
+
+        a:link
+            text-decoration: none
+
+        &.active
+            cursor: not-allowed
+            a
+                background: var(--color-body-txt-transparentize-2)
+                color: var(--color-body-bg)
+                font-weight: bold
+        
+        &.disabled
+            display: none
+            // background: none
+            // cursor: not-allowed
+            // a[href="#"]
+            //     cursor: not-allowed
+            //     outline: none
+            //     &:hover, &:active, &:focus
+            //         color: var(--color-body-txt)

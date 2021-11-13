@@ -1,0 +1,22 @@
+{{ if not .IsHome }}
+<nav class=breadcrumbs>
+  <ol>
+    {{ template "breadcrumbs" (dict "p1" . "p2" .) }}
+  </ol>
+</nav>
+{{ end }}
+
+{{ define "breadcrumbs" }}
+{{ if .p1.Parent }}
+{{ template "breadcrumbs" (dict "p1" .p1.Parent "p2" .p2 ) }}
+{{ else if not .p1.IsHome }}
+{{ template "breadcrumbs" (dict "p1" .p1.Site.Home "p2" .p2 ) }}
+{{ end }}
+{{ if and (not (eq .p1 .p2)) (not (eq .p1.Title "")) }}
+<li>
+  <a href="{{ .p1.Permalink }}" title="{{ .p1.Title }}">
+    {{ .p1.Title }}
+  </a>
+</li>
+{{ end }}
+{{ end }}

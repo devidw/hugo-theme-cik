@@ -1,0 +1,3 @@
+{{- if not .IsZero -}}
+<time datetime="{{ .Format "2006-01-02t12:00:00" }}">{{ .Format "Monday, January 2, 2006" }}</time>
+{{- end -}}

@@ -1,0 +1,6 @@
+User-agent: *
+{{ range .Pages }}
+{{ if and (isset .Params "noindex") (eq .Params.noindex true) }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+{{ end }}

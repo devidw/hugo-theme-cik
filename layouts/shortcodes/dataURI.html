@@ -1,0 +1,17 @@
+{{/*
+  shortcode to convert image paths into data URIs
+  using the funcs/datURI.html partial
+  {{< dataURI path="path/to/image.jpg" >}}
+  {{< dataURI "path/to/image.jpg" >}}
+*/}}
+{{- if .IsNamedParams -}}
+  {{- if .Get "path" -}}
+    {{- $path := .Get "path" -}}
+    {{- partial "func/dataURI.go.html" $path -}}
+  {{- end -}}
+{{- else -}}
+  {{- if .Get 0 -}}
+    {{- $path := .Get 0 -}}
+    {{- partial "func/dataURI.go.html" $path -}}
+  {{- end -}}
+{{- end -}}

@@ -1,0 +1,17 @@
+{{ partial "breadcrumbs.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+
+{{ if .IsPage }}
+<p>
+    <span>
+        The most current version as of
+    </span>
+    {{ if .Lastmod }}
+    {{ partial "func/date" .Lastmod }}.
+    {{ else if .PublishDate }}
+    {{ partial "func/date" .PublishDate }}.
+    {{ end }}
+</p>
+{{ end }}

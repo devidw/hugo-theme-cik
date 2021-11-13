@@ -1,0 +1,12 @@
+supports:
+  - question: "Would you like to follow me on GitHub?"
+    answers:
+      answerYes:
+        title: "Yes"
+        text: "Y"
+        href: "https://github.com/devidw"
+        rel: "author external"
+      answerNo:
+        title: "No"
+        text: "n"
+        href: "#"

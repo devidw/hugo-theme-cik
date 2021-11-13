@@ -1,0 +1,39 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<meta name="robots" content="{{ if .Params.noindex }}noindex{{ else }}index, follow{{ end }}">
+
+<title>
+  {{ if .Title }}
+    {{ .Title }}
+  {{ else }}
+    {{ .Site.Title }}
+  {{ end }}
+</title>
+
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/google_news.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+{{ if templates.Exists "partials/structureddata/include.html" }}
+  {{ partial "structureddata/include.html" . }}
+{{ end }}
+
+{{ range .AlternativeOutputFormats }}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end }}
+
+{{ with .Site.Params.ThemeColor }}
+  <meta name="theme-color" content="{{ . }}">
+{{ end }}
+
+{{ partial "head/icons.go.html" .Site.Params }}
+
+{{ partial "head/style.go.html" . }}

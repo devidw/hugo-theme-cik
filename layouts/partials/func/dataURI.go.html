@@ -1,0 +1,11 @@
+{{/* build full path */}}
+{{- $path := (print "/static/" . ) -}}
+{{/* get file contents */}}
+{{- $contents := readFile $path -}}
+{{/* extract image extension and remove leading period */}}
+{{- $ext := path.Ext $path -}}
+{{- $ext := trim $ext "." -}}
+{{/* decide which mime-type to use based on image extension */}}
+{{- $formats := (dict "svg" "svg+xml" "png" "png" "jpg" "jpeg" "jpeg" "jpeg" "webp" "webp") -}}
+{{/* return full data URI */}}
+{{- return (print "data:image/" (index $formats $ext) ";base64," (base64Encode $contents)) -}}

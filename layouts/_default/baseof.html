@@ -1,0 +1,31 @@
+{{ $languageCode := .Site.LanguageCode }}
+{{ with .Params.Lang }}
+{{ $languageCode = . }}
+{{ end }}
+<!DOCTYPE html>
+<html lang="{{ $languageCode | default "en-us" }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+
+<head>
+  {{ block "head" . }}
+  {{ partial "head/head.go.html" . }}
+  {{ end }}
+</head>
+
+<body class="{{ if .IsPage }}single{{ else if .IsHome }}home{{ else }}list{{ end }}">
+  <header>
+    {{ block "header" . }}
+    {{ .Render "header" }}
+    {{ end }}
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    {{ block "footer" . }}
+    {{ .Render "footer" }}
+    {{ end }}
+  </footer>
+  {{ partial "head/script.go.html" . }}
+</body>
+
+</html>

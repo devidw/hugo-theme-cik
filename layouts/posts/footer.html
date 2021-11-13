@@ -1,0 +1,24 @@
+{{- define "answer" -}}
+<a {{ with .href }}href="{{ . | safeHTMLAttr }}" {{ end }} {{ with .title }}title="{{ . }}" {{ end }} {{ with .rel }}
+    rel="{{ . }}" {{ if in . "external" }}target="_blank" {{ end }} {{ end }}>{{ with .text }}{{ . }}{{ end }}</a>
+{{- end -}}
+
+{{ if .IsPage }}
+{{ $supports := $.Site.Data.supports.supports }}
+{{ $support := index ($supports | shuffle) 0 }}
+
+{{ with $support }}
+<section class=supporting>
+    <p>
+        {{ .question | safeHTML }}
+    </p>
+    <p>
+        <code>
+            [{{- template "answer" .answers.answerYes -}}/{{- template "answer" .answers.answerNo -}}]
+        </code>
+    </p>
+</section>
+{{ end }}
+{{ end }}
+
+{{ partial "menu.html" . }}

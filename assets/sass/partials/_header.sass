@@ -1,0 +1,31 @@
+body
+    &.single > header
+        @media (min-width: $breakpoint)
+            margin-top: 25vh
+
+    & > header
+        max-width: 95%
+        text-align: center
+        margin: 10vh auto
+
+        @media (min-width: $breakpoint)
+            max-width: $container-width * 2
+
+        h1
+            margin: 2rem 0
+            text-transform: uppercase
+            // letter-spacing: 0.01em
+
+            @media (min-width: $breakpoint)
+                font-size: 4rem
+                line-height: 1
+                margin: 1.5rem 0 2rem 0
+
+            & + p
+                // margin: 0
+                color: var(--color-body-txt-transparentize-5)
+                font-size: small
+
+                // time
+                //     font-weight: bold
+                //     font-style: italic

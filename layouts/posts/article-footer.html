@@ -1,0 +1,22 @@
+<footer>
+    <address>
+        <figure>
+            {{ with .Site.Params.Author.Signature }}
+            <img {{ with partial "func/dataURI.go.html" . }} {{ printf "src=%q" . | safeHTMLAttr }} {{ end }}>
+            {{ end }}
+            <figcaption>
+                {{ with .Site.Params.Author.name }}
+                <span>
+                    — {{ . }}
+                </span>
+                {{ end }}
+                {{ with .PublishDate }}
+                <br>
+                <small>
+                    {{ partial "func/date" . }}
+                </small>
+                {{ end }}
+            </figcaption>
+        </figure>
+    </address>
+</footer>
