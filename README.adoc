@@ -1,1 +1,1 @@
-= Contentful Hugo Theme
+= Content first Hugo Theme

@@ -1,11 +1,11 @@
-name = 'Interplanetary Hugo Theme'
+name = 'Content first Hugo Theme'
 license = 'MIT'
 licenselink = 'https://opensource.org/licenses/MIT'
-description = 'Hugo Theme optimized for interplanetary usage on IPFS'
+description = 'Content first Hugo Theme'
 homepage = 'https://github.com/devidw/hugo-theme-interplanetary'
 # demosite = ''
-tags = ['ipfs', 'interplanetary', 'decentralized', 'light', 'dark', 'blog', 'responsive', 'dark mode', 'minimal']
-features = ['widgets', 'search', 'tags', 'edit-on-github', 'header', 'sidebar', 'footer', 'custom-css', 'custom-js', 'toc', 'menu', 'mobile-menu']
+tags = ['light', 'dark', 'blog', 'responsive', 'dark mode', 'minimal']
+features = ['sections', 'edit-on-github', 'header', 'sidebar', 'footer', 'custom-css', 'custom-js', 'toc', 'menu', 'mobile-menu']
 
 [author]
   name = 'devidw'
