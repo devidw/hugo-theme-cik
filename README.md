@@ -1,6 +1,5 @@
 <h1 align=center>
     👑
-    &nbsp; <!-- only for toc -->
     <br>
     Hugo Theme: Content is King
 </h1>
