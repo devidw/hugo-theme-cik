@@ -1,7 +1,4 @@
-<p align=center>👑</p>
-<h1 align=center>
-    Hugo Theme: Content is King
-</h1>
+# Hugo Theme: Content is King
 
 ## Installation
 1. Install dependecies
@@ -66,5 +63,3 @@ noindex: true
 * excludes via `robots.txt`
 * excludes from `sitemap.xml`
 * excludes from RSS feed
-
-<p align=center>👑</p>
