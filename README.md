@@ -1,10 +1,8 @@
 # Hugo Theme: Content is King
 
-## Installation
-1. Install dependecies
-    1. [Hugo Theme Component: Asciidoctor Skin](https://github.com/devidw/hugo-theme-component-asciidoctor-skin)
-3. Clone this theme to your `themes` directory
-```bash
+## Install
+1. Clone this theme to your `themes` directory
+```cmd
 git submodule add https://github.com/devidw/hugo-theme-cik ./themes/hugo-theme-cik
 ```
 3. Add this theme to your list of themes inside your config-file
@@ -63,3 +61,8 @@ noindex: true
 * excludes via `robots.txt`
 * excludes from `sitemap.xml`
 * excludes from RSS feed
+
+## Update
+```cmd
+git submodule update --init --recursive --remote
+```
