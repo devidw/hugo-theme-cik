@@ -5,14 +5,14 @@
 
 <title>
   {{ if .Title }}
-    {{ .Title }}
+  {{ .Title }}
   {{ else }}
-    {{ .Site.Title }}
+  {{ .Site.Title }}
   {{ end }}
 </title>
 
 {{ with .Description }}
-  <meta name="description" content="{{ . }}">
+<meta name="description" content="{{ . }}">
 {{ end }}
 
 <link rel="canonical" href="{{ .Permalink }}">
@@ -23,17 +23,22 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 {{ if templates.Exists "partials/structureddata/include.html" }}
-  {{ partial "structureddata/include.html" . }}
+{{ partial "structureddata/include.html" . }}
 {{ end }}
 
 {{ range .AlternativeOutputFormats }}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ printf `
+<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end }}
 
 {{ with .Site.Params.ThemeColor }}
-  <meta name="theme-color" content="{{ . }}">
+<meta name="theme-color" content="{{ . }}">
 {{ end }}
 
 {{ partial "head/icons.go.html" .Site.Params }}
 
 {{ partial "head/style.go.html" . }}
+
+{{ if and (isset .Params "math") (eq .Params.Math true) }}
+{{ partial "head/math.html" . }}
+{{ end }}
