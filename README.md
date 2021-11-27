@@ -1,6 +1,6 @@
 # Hugo Theme: Content is King
 
-## Install
+## Installation
 1. Clone this theme to your `themes` directory
 ```cmd
 git submodule add https://github.com/devidw/hugo-theme-cik ./themes/hugo-theme-cik
