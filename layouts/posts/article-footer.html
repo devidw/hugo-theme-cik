@@ -1,8 +1,15 @@
 <footer>
-    <address>
+    <address id=signature>
         <figure>
             {{ with .Site.Params.Author.Signature }}
+            {{- $path := (print "/static/" . ) -}}
+            {{- $contents := readFile $path -}}
+            {{ $contents | safeHTML }}
+            {{/*
+            <object {{ with partial "func/dataURI.go.html" . }} {{ printf "data=%q" . | safeHTMLAttr }} {{ end
+                }}></object>
             <img {{ with partial "func/dataURI.go.html" . }} {{ printf "src=%q" . | safeHTMLAttr }} {{ end }}>
+            */}}
             {{ end }}
             <figcaption>
                 {{ with .Site.Params.Author.name }}
@@ -20,3 +27,7 @@
         </figure>
     </address>
 </footer>
+
+<script>
+    {{ (resources.Get "js/signature.js" | minify).Content | safeJS }}
+</script>
