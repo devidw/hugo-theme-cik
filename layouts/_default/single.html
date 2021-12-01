@@ -3,8 +3,4 @@
   {{ .Content }}
   {{ .Render "article-footer" }}
 </article>
-
-<script>
-  {{-  (resources.Get "js/initial.js" | minify).Content | safeJS  -}}
-</script>
 {{ end }}

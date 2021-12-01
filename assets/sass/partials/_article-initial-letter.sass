@@ -1,0 +1,24 @@
+p
+    &[data-lines]:first-of-type
+        &::first-letter
+            // margin-top: 0.5rem
+            // margin-bottom: -0.4rem
+            margin-right: .5rem
+            padding: 0 .2rem 0 .2rem
+            // padding-bottom: -0.5rem
+            font-family: initial-font
+            border-radius: .2rem
+            // background-color: color('body-txt')
+            background-color: color('body-txt-transparentize-1')
+            color: color('body-bg')
+            // background: linear-gradient(to bottom, color('brand') 40%, color('body-txt') 80%)
+
+            @supports (-webkit-initial-letter: 2) or (initial-letter: 2)
+                -webkit-initial-letter: var(--initial-lines, 2)
+                initial-letter: var(--initial-lines, 2)
+
+            // @see https://www.digitalocean.com/community/tutorials/css-drop-caps
+            @supports not ((-webkit-initial-letter: 2) or (initial-letter: 2))
+                font-size: calc(var(--initial-lines, 2) * 2rem)
+                line-height: 1
+                float: left

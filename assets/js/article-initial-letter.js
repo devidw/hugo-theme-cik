@@ -1,7 +1,11 @@
-let initial = document.querySelector('article > p, article > .paragraph > p')
-// console.log(initial)
+function getAndSetInitialLineCount() {
+    let initial = document.querySelector('article > p, article > .paragraph > p')
+    // console.log(initial)
 
-if (initial) {
+    if (!initial) {
+        return
+    }
+
     let initialHeight = initial.offsetHeight
     // console.log(initialHeight)
 
@@ -9,7 +13,7 @@ if (initial) {
 
     let initialLines = initialHeight / lineHeight
     initialLines = Math.floor(initialLines)
-    console.log(initialLines)
+    // console.log(initialLines)
 
     // limit maximal number of lines
     if (initialLines > 3) {
@@ -21,3 +25,6 @@ if (initial) {
         initial.setAttribute('data-lines', initialLines)
     }
 }
+
+window.addEventListener('load', getAndSetInitialLineCount)
+window.addEventListener('resize', getAndSetInitialLineCount)
