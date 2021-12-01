@@ -2,6 +2,13 @@
 
 <h1>{{ .Title }}</h1>
 
+{{ if not .IsPage }}
+{{ if .Content }}
+<p>{{ .Content }}</p>
+{{ else if .Description }}
+<p>{{ .Description }}</p>
+{{ end }}
+{{ end }}
 
 {{ if .IsPage }}
 <p>

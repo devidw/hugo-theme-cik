@@ -7,6 +7,17 @@ body
                 margin-top: 4rem
 
             h2
+                a
+                    &[hreflang]
+                        &:before
+                            display: inline-block
+                            // margin-left: -3.5rem
+                            content: attr(hreflang)
+
+                    &[hreflang="de"]
+                        &:before
+                            content: "🇩🇪"
+
                 @media (min-width: $breakpoint)
                     margin-left: -15%
 

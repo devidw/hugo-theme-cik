@@ -1,9 +1,11 @@
 <article {{with .Params.Lang}}lang="{{.}}" {{end}}>
     <header>
         <h2>
-            {{ with .Params.Lang }}
-            {{ index $.Site.Data.flags.flags . }}
-            {{ end }}
+            {{/*
+                {{ with .Params.Lang }}
+                {{ index $.Site.Data.flags.flags . }}
+                {{ end }}
+            */}}
             <a href="{{.Permalink}}" title="{{.Title}}" rel="bookmark" {{with .Params.Lang}}hreflang="{{.}}" {{end}}>
                 {{.Title}}
             </a>

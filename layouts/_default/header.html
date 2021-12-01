@@ -1,3 +1,17 @@
 {{ partial "breadcrumbs.html" . }}
 
-<h1>{{ .Title }}</h1>
+<h1>
+    {{ if .Title }}
+    {{ .Title }}
+    {{ else if .Site.Title }}
+    {{ .Site.Title }}
+    {{ end }}
+</h1>
+
+{{ if not .IsPage }}
+{{ if .Content }}
+<p>{{ .Content }}</p>
+{{ else if .Description }}
+<p>{{ .Description }}</p>
+{{ end }}
+{{ end }}
