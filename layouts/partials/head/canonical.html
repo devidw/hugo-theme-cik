@@ -1,0 +1,15 @@
+{{/*
+{{ $uglyURLs := $.Param "uglyURLs" | default false }}
+{{ $paginatePath := $.Param "paginatePath" | default "page" }}
+{{ $paginator := .Paginate (where .Site.RegularPages ".Params.post" "!=" false) }}
+
+{{ $permalink := .Permalink }}
+{{ with $paginator }}
+{{ if and (or $.IsHome $.IsNode) (ne .PageNumber 1) }}
+{{ $permalink = print $permalink $paginatePath "/" .PageNumber (cond $uglyURLs ".html" "/") }}
+{{ end }}
+{{ end }}
+
+<link rel="canonical" href="{{ $permalink }}">
+*/}}
+<link rel="canonical" href="{{ .Permalink }}">

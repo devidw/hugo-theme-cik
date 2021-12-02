@@ -1,6 +1,19 @@
 {{ define "main" }}
-{{ range (.Paginate .RegularPagesRecursive).Pages }}
+
+{{ with .Content }}
+<article>
+    {{ . }}
+</article>
+{{ end }}
+
+{{ $pages := (.Paginate .Pages).Pages }}
+
+{{ range $pages }}
 {{ .Render "summary" }}
 {{ end }}
+
 {{ template "_internal/pagination.html" . }}
+{{/*
+*/}}
+
 {{ end }}

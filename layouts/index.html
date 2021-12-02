@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-{{ $posts := where .Site.RegularPages "Section" "not in" ("") }}
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 
-{{ range (.Paginate $posts).Pages }}
+{{ range (.Paginate $pages).Pages }}
 {{ .Render "summary" }}
 {{ end }}
 

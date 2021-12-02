@@ -15,7 +15,9 @@
 <meta name="description" content="{{ . }}">
 {{ end }}
 
-<link rel="canonical" href="{{ .Permalink }}">
+{{/*
+  */}}
+{{ partial "head/canonical" . }}
 
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/google_news.html" . }}
