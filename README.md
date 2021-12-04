@@ -90,7 +90,7 @@ If there is no `/assets/sass/_custom.sass` file in your project you can simply c
 #### Using SASS
 Simply add your SASS rules into `_custom.sass`.
 
-All your custom styles will be compiled from SASS to CSS and minified automatically by the Hugo theme for you, so you don't have to think of these kind of things anymore.
+All your custom styles will be compiled from SASS to CSS and minified automatically via Hugo pipes.
 
 #### Using SCSS or CSS
 If you not so familiar with SASS you can also write SCSS or just plain CSS.
@@ -102,7 +102,7 @@ To do so you only have to import your `.scss` or `.css` file into `_custom.sass`
 ```
 
 ##### Example
-Say you want to include some CSS styles, which you life inside `/assets/sass/my-custom-styles.css`.
+Say you want to include some CSS styles, which you write into `/assets/sass/my-custom-styles.css`.
 
 To add them to the theme you add the following into `/assets/sass/_custom.sass`:
 
