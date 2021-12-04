@@ -1,4 +1,5 @@
 # Hugo Theme: Content is King
+This Hugo theme focuses purely on content: Content is king. Layout and appearance are simply by design. The primary goal of the theme is to give the website visitor maximal user experience for reading and enjoying the published content elegantly. No Sidebars or any other annoying elements that interrupt the reading experience.
 
 ## Installation
 1. Clone this theme to your `themes` directory
@@ -21,6 +22,13 @@ theme:
   - "hugo-theme-cik"
   - "…"
 ```
+
+
+## Update
+```cmd
+git submodule update --init --recursive --remote
+```
+
 
 ## Configuration
 
@@ -72,8 +80,3 @@ math: true
 ```
 
 * Enables [KaTeX](https://katex.org) math rendering for the given page
-
-## Update
-```cmd
-git submodule update --init --recursive --remote
-```
