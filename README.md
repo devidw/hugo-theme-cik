@@ -1,4 +1,4 @@
-# Hugo Theme: Content is King
+# Content first Hugo Theme
 This Hugo theme focuses purely on content: Content is king. Layout and appearance are simply by design. The primary goal of the theme is to give the website visitor maximal user experience for reading and enjoying the published content elegantly. No Sidebars or any other annoying elements that interrupt the reading experience.
 
 ## Installation
@@ -80,3 +80,34 @@ math: true
 ```
 
 * Enables [KaTeX](https://katex.org) math rendering for the given page
+
+
+### Styles
+You can add additional custom styles to the Hugo theme via the `/assets/sass/_custom.sass` file.
+
+If there is no `/assets/sass/_custom.sass` file in your project you can simply create it.
+
+#### Using SASS
+Simply add your SASS rules into `_custom.sass`.
+
+All your custom styles will be compiled from SASS to CSS and minified automatically by the Hugo theme for you, so you don't have to think of these kind of things anymore.
+
+#### Using SCSS or CSS
+If you not so familiar with SASS you can also write SCSS or just plain CSS.
+
+To do so you only have to import your `.scss` or `.css` file into `_custom.sass` by doing a SASS-import using the `@import` method.
+
+```sass
+@import <filename>
+```
+
+##### Example
+Say you want to include some CSS styles, which you life inside `/assets/sass/my-custom-styles.css`.
+
+To add them to the theme you add the following into `/assets/sass/_custom.sass`:
+
+```sass
+@import my-custom-styles
+```
+
+Do not include the file extension like `.scss` or `.css` in the path of the `@import` rule.

@@ -5,7 +5,7 @@ description = 'Content first Hugo Theme'
 homepage = 'https://github.com/devidw/hugo-theme-cik'
 # demosite = ''
 tags = ['light', 'dark', 'blog', 'responsive', 'dark mode', 'minimal']
-features = ['sections', 'edit-on-github', 'header', 'footer', 'custom-css', 'custom-js', 'toc', 'menu', 'mobile-menu']
+features = ['sections', 'header', 'footer', 'custom-css', 'custom-js', 'navigation', 'nav', 'math', 'asciidoc', 'asciidoctor']
 
 [author]
   name = 'devidw'
