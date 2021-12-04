@@ -52,15 +52,26 @@ icons:
   touchIcon: logo.svg # Safari
   maskIcon: logo.svg # Safari
 ```
+
+
 ### Frontmatter
+
 #### `noindex`
 ```yaml
 noindex: true
 ```
+
 * sets robots meta tag
 * excludes via `robots.txt`
 * excludes from `sitemap.xml`
 * excludes from RSS feed
+
+#### `math`
+```yaml
+math: true
+```
+
+* Enables [KaTeX](https://katex.org) math rendering for the given page
 
 ## Update
 ```cmd
