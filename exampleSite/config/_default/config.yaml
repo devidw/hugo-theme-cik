@@ -1,0 +1,14 @@
+baseURL: https://example.com
+languageCode: en
+title: Content First Hugo Theme
+
+themesdir: ../..
+theme: 
+  - hugo-theme-cik
+  - hugo-theme-component-asciidoctor-skin
+
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+enableRobotsTXT: true

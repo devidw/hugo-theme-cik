@@ -1,6 +1,8 @@
 # Content first Hugo Theme
 This Hugo theme focuses purely on content: Content is king. Layout and appearance are simply by design. The primary goal of the theme is to give the website visitor maximal user experience for reading and enjoying the published content elegantly. No Sidebars or any other annoying elements that interrupt the reading experience.
 
+![Screenshot](./images/screenshot.png)
+
 ## Installation
 1. Clone this theme to your `themes` directory
 ```cmd

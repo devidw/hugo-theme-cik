@@ -1,0 +1,14 @@
+author: 
+  name: David Wolf
+  email: david@wolf.gdn
+  # signature: signature/static-1.svg
+
+themeColor: "#ff6961"
+
+mainSections:
+  - posts
+
+icons:
+  favicon: logo.svg
+  touchIcon: logo.svg
+  maskIcon: logo.svg

@@ -1,0 +1,9 @@
+footer:
+  - name: "Home"
+    weight: 1
+    identifier: "home"
+    url: "/"
+  - name: "Example"
+    weight: 2
+    identifier: "example"
+    url: "/example/"

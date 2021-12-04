@@ -3,7 +3,7 @@
     rel="{{ . }}" {{ if in . "external" }}target="_blank" {{ end }} {{ end }}>{{ with .text }}{{ . }}{{ end }}</a>
 {{- end -}}
 
-{{ if .IsPage }}
+{{ if and (.IsPage) (isset $.Site.Data "supports") (isset $.Site.Data.supports "supports") }}
 {{ $supports := $.Site.Data.supports.supports }}
 {{ $support := index ($supports | shuffle) 0 }}
 
