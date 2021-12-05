@@ -9,7 +9,7 @@ supports:
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: ""
   - question: "Would you like to add my <abbr title='Really Simple Syndication'>RSS</abbr> feed?"
     answers:
       answerYes:
@@ -19,7 +19,7 @@ supports:
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: ""
   - question: "Would you like to buy me a coffee?"
     answers:
       answerYes:
@@ -30,4 +30,4 @@ supports:
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: ""

@@ -34,7 +34,7 @@ git submodule update --init --recursive --remote
 
 ## Configuration
 
-### Config
+### Params
 
 #### Main Sections
 Please specifiy in which sections you posts are located:
@@ -48,6 +48,15 @@ author:
   name: David Wolf
   email: david@wolf.gdn
   signature: signature.svg # static file path
+```
+
+#### Payments
+Generates `<link rel=payment>` links and adds them to the `<head>`
+
+```yaml
+payments:
+  - https://paypal.me/devidwolf
+  - https://buymeacoffee.com/dwolf
 ```
 
 #### Theme color
@@ -66,7 +75,7 @@ icons:
 
 ### Frontmatter
 
-#### `noindex`
+#### No index
 ```yaml
 noindex: true
 ```
@@ -76,7 +85,7 @@ noindex: true
 * excludes from `sitemap.xml`
 * excludes from RSS feed
 
-#### `math`
+#### Math
 ```yaml
 math: true
 ```

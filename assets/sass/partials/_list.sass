@@ -4,7 +4,10 @@ body
         article
 
             & + article
-                margin-top: 4rem
+                margin-top: 2rem
+
+                @media (min-width: $breakpoint)
+                    margin-top: 4rem
 
             h2
                 a
@@ -21,5 +24,13 @@ body
                 @media (min-width: $breakpoint)
                     margin-left: -15%
 
-            .date
-                color: var(--color-body-txt-transparentize-5)
+                @media (max-width: $breakpoint)
+                    font-size: 20px
+                    font-weight: 500
+
+            .content
+                @media (max-width: $breakpoint)
+                    display: none
+
+                .date
+                    color: var(--color-body-txt-transparentize-5)

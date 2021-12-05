@@ -1,0 +1,5 @@
+{{ with $.Site.Params.Payments }}
+{{ range . }}
+<link rel="payment" href="{{ . | safeHTMLAttr }}">
+{{ end }}
+{{ end }}

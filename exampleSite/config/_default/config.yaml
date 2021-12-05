@@ -1,11 +1,14 @@
-baseURL: https://example.com
+baseURL: https://devidw.github.io/hugo-theme-cik/
 languageCode: en
 title: Content First Hugo Theme
+
 
 themesdir: ../..
 theme: 
   - hugo-theme-cik
   - hugo-theme-component-asciidoctor-skin
+
+publishDir: ../docs
 
 disableKinds:
   - taxonomy

@@ -33,6 +33,8 @@
 <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end }}
 
+{{ partial "head/payments" . }}
+
 {{ with .Site.Params.ThemeColor }}
 <meta name="theme-color" content="{{ . }}">
 {{ end }}

@@ -12,3 +12,7 @@ icons:
   favicon: logo.svg
   touchIcon: logo.svg
   maskIcon: logo.svg
+
+payments:
+  - https://paypal.me/devidwolf
+  - https://buymeacoffee.com/dwolf

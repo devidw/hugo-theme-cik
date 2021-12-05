@@ -9,7 +9,7 @@ supports:
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: "javascript:document.querySelector('.supporting').remove()"
   - question: "Would you like to add my <abbr title='Really Simple Syndication'>RSS</abbr> feed?"
     answers:
       answerYes:
@@ -19,15 +19,15 @@ supports:
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: "javascript:document.querySelector('.supporting').remove()"
   - question: "Would you like to buy me a coffee?"
     answers:
       answerYes:
         title: "Yes"
         text: "Y"
         href: "https://buymeacoffee.com/dwolf"
-        rel: "author external noopener noreferrer"
+        rel: "author external noopener noreferrer payment"
       answerNo:
         title: "No"
         text: "n"
-        href: "/#"
+        href: "javascript:document.querySelector('.supporting').remove()"

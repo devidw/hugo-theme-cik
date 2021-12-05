@@ -1,7 +1,15 @@
 ul.pagination
     text-align: center
+    margin-left: 0
     margin-top: 10vh
     margin-bottom: 25vh
+
+    @media (max-width: $breakpoint)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+
 
     li
         display: inline-block
@@ -26,7 +34,11 @@ ul.pagination
             a
 
         & + li
-            margin-left: 0.5em
+            @media (max-width: $breakpoint)
+                margin-top: 1em
+
+            @media (min-width: $breakpoint)
+                margin-left: 0.5em
 
         a:link
             text-decoration: none
