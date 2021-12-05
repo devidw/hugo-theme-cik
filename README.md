@@ -4,7 +4,7 @@ This Hugo theme focuses purely on content: Content is king. Layout and appearanc
 ![Screenshot](./images/screenshot.png)
 
 ## Installation
-1. Install dependencies: The theme makes use of the following theme components, please follow the instroctions of the projects `README.adoc` files:
+1. Install dependencies: The theme makes use of the following theme components, please follow the instructions of the projects `README.adoc` files:
    1. [Hugo Theme Component: Asciidoctor Skin](https://github.com/devidw/hugo-theme-component-asciidoctor-skin)
 3. Clone this theme to your `themes` directory
 ```cmd
