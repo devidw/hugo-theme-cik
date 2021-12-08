@@ -28,6 +28,10 @@
 {{ partial "structureddata/include.html" . }}
 {{ end }}
 
+{{ if templates.Exists "partials/oembed.html" }}
+{{ partial "oembed.html" . }}
+{{ end }}
+
 {{ range .AlternativeOutputFormats }}
 {{ printf `
 <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -43,6 +47,4 @@
 
 {{ partial "head/style.go.html" . }}
 
-{{ if and (isset .Params "math") (eq .Params.Math true) }}
 {{ partial "head/math.html" . }}
-{{ end }}

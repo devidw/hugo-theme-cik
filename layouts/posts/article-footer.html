@@ -1,11 +1,13 @@
 <footer>
     <address>
         <figure>
-            {{ with $.Site.Params.Author.Signature }}
             {{ partial "signature" . }}
-            {{ end }}
+            {{/*
+                {{ with $.Site.Author.Signature }}
+                {{ end }}
+                */}}
             <figcaption>
-                {{ with .Site.Params.Author.name }}
+                {{ with .Site.Author.name }}
                 <span>
                     — {{ . }}
                 </span>

@@ -85,12 +85,12 @@ noindex: true
 * excludes from `sitemap.xml`
 * excludes from RSS feed
 
-#### Math
+<!-- #### Math
 ```yaml
 math: true
 ```
 
-* Enables [KaTeX](https://katex.org) math rendering for the given page
+* Enables [KaTeX](https://katex.org) math rendering for the given page -->
 
 
 ### Styles

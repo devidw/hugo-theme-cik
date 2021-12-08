@@ -3,7 +3,7 @@ license = 'MIT'
 licenselink = 'https://opensource.org/licenses/MIT'
 description = 'Content first Hugo Theme'
 homepage = 'https://github.com/devidw/hugo-theme-cik'
-# demosite = ''
+demosite = 'https://devidw.github.io/hugo-theme-cik/'
 tags = ['light', 'dark', 'light mode', 'dark mode', 'blog', 'responsive', 'minimal', 'pagination',]
 features = ['sections', 'header', 'footer', 'custom-css', 'custom-js', 'navigation', 'nav', 'math', 'asciidoc', 'asciidoctor', 'pagination',]
 
