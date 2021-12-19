@@ -1,0 +1,5 @@
+{{ $rel := .rel }}
+
+{{ range .links }}
+<link rel="{{ $rel }}" href="{{ . | safeHTMLAttr }}">
+{{ end }}
