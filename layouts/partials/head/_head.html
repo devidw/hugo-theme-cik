@@ -16,11 +16,14 @@
 {{ end }}
 
 {{/*
-  */}}
+*/}}
 {{ partial "head/canonical" . }}
 
 {{ template "_internal/opengraph.html" . }}
+{{/*
+@see https://github.com/gohugoio/hugo/issues/9172
 {{ template "_internal/google_news.html" . }}
+*/}}
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 

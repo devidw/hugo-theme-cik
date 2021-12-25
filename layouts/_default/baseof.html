@@ -17,14 +17,12 @@
     {{ .Render "header" }}
     {{ end }}
   </header>
-  <main>
+  <main class="wrapper">
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
-    {{ block "footer" . }}
-    {{ .Render "footer" }}
-    {{ end }}
-  </footer>
+  {{ block "footer" . }}
+  {{ .Render "footer" }}
+  {{ end }}
   {{ partial "head/script.go.html" . }}
 </body>
 

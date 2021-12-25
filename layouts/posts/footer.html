@@ -1,41 +1,49 @@
-{{- define "answer" -}}
-{{- $href := .href -}}
-<!-- https://discourse.gohugo.io/t/generate-a-random-string/26338 -->
-{{- $id := delimit (shuffle (split (md5 "foo") "" )) "" -}}
-{{- $id = print "answer-" $id -}}
-{{- if or (eq .href "") (eq .href "") -}}
-{{- $href = print "#" $id -}}
-{{- end -}}
-<a {{ with $id }}id="{{ . | safeHTMLAttr }}" {{end}} {{ with $href }}href="{{ . | safeHTMLAttr }}" {{ end }} {{ with
-    .title }}title="{{ . }}" {{ end }} {{ with .rel }} rel="{{ . }}" {{ if in . "external" }}target="_blank" {{ end }}
-    {{ end }}>{{ with .text }}{{ . }}{{ end }}</a>
-{{- if or (eq .href "") (eq .href "") -}}
-<script>
-    let no = document.getElementById('{{ $id }}')
-    // console.log(no)
-    no.addEventListener('click', function () {
-        document.querySelector('.supporting').remove()
-    })
-</script>
-{{- end -}}
-{{- end -}}
-
-{{ if and (.IsPage) (isset $.Site.Data "supports") (isset $.Site.Data.supports "supports") }}
-{{ $supports := $.Site.Data.supports.supports }}
-{{ $support := index ($supports | shuffle) 0 }}
-
-{{ with $support }}
-<section class=supporting>
-    <p>
-        {{ .question | safeHTML }}
-    </p>
-    <p>
-        <code>
-            ({{- template "answer" .answers.answerYes -}}/{{- template "answer" .answers.answerNo -}})
-        </code>
-    </p>
+{{ if templates.Exists "partials/webmentions.html" }}
+<section class="wrapper">
+    {{ partial "webmentions.html" . }}
 </section>
 {{ end }}
-{{ end }}
 
-{{ partial "menu.html" . }}
+<footer> 
+    {{- define "answer" -}}
+    {{- $href := .href -}}
+    <!-- https://discourse.gohugo.io/t/generate-a-random-string/26338 -->
+    {{- $id := delimit (shuffle (split (md5 "foo") "" )) "" -}}
+    {{- $id = print "answer-" $id -}}
+    {{- if or (eq .href "") (eq .href "") -}}
+    {{- $href = print "#" $id -}}
+    {{- end -}}
+    <a {{ with $id }}id="{{ . | safeHTMLAttr }}" {{end}} {{ with $href }}href="{{ . | safeHTMLAttr }}" {{ end }} {{ with
+        .title }}title="{{ . }}" {{ end }} {{ with .rel }} rel="{{ . }}" {{ if in . "external" }}target="_blank" {{ end
+        }} {{ end }}>{{ with .text }}{{ . }}{{ end }}</a>
+    {{- if or (eq .href "") (eq .href "") -}}
+    <script>
+        let no = document.getElementById('{{ $id }}')
+        // console.log(no)
+        no.addEventListener('click', function () {
+            document.querySelector('.supporting').remove()
+        })
+    </script>
+    {{- end -}}
+    {{- end -}}
+
+    {{ if and (.IsPage) (isset $.Site.Data "supports") (isset $.Site.Data.supports "supports") }}
+    {{ $supports := $.Site.Data.supports.supports }}
+    {{ $support := index ($supports | shuffle) 0 }}
+
+    {{ with $support }}
+    <section class=supporting>
+        <p>
+            {{ .question | safeHTML }}
+        </p>
+        <p>
+            <code>
+            ({{- template "answer" .answers.answerYes -}}/{{- template "answer" .answers.answerNo -}})
+        </code>
+        </p>
+    </section>
+    {{ end }}
+    {{ end }}
+
+    {{ partial "menu.html" . }}
+</footer>
