@@ -10,13 +10,12 @@ ul.pagination
         justify-content: space-between
         align-items: center
 
-
     li
         display: inline-block
 
         a
             display: inline-block
-            background: var(--color-body-txt-transparentize-9)
+            background: transparentize(#888, 0.9)
             width: 2.5rem
             height: 2.5rem
             padding: .25em .75em
@@ -46,10 +45,10 @@ ul.pagination
         &.active
             cursor: not-allowed
             a
-                background: var(--color-body-txt-transparentize-2)
+                background: transparentize(#888, 0.2)
                 color: var(--color-body-bg)
                 font-weight: bold
-        
+
         &.disabled
             display: none
             // background: none

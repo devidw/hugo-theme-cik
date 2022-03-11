@@ -3,7 +3,7 @@
 {{ $languageCode = . }}
 {{ end }}
 <!DOCTYPE html>
-<html lang="{{ $languageCode | default "en-us" }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}">
+<html lang="{{ $languageCode | default " en-us" }}" dir="{{ .Site.Language.LanguageDirection | default " ltr" }}">
 
 <head>
   {{ block "head" . }}
@@ -12,6 +12,7 @@
 </head>
 
 <body class="{{ if .IsPage }}single{{ else if .IsHome }}home{{ else }}list{{ end }}">
+  {{ partial "hooks/body/start.html" . }}
   <header>
     {{ block "header" . }}
     {{ .Render "header" }}
@@ -23,7 +24,8 @@
   {{ block "footer" . }}
   {{ .Render "footer" }}
   {{ end }}
-  {{ partial "head/script.go.html" . }}
+  {{ partial "head/script.html" . }}
+  {{ partial "hooks/body/end.html" . }}
 </body>
 
 </html>

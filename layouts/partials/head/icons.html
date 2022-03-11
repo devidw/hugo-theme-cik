@@ -1,0 +1,16 @@
+{{/* Favicon */}}
+{{ with .Icons.Favicon }}
+<link rel="icon" {{ with partial "func/dataURI.html" . }} {{ printf "href=%q" . | safeHTMLAttr }} {{ end }}>
+{{ end }}
+
+{{/* Touch Icon (Apple) */}}
+{{ with .Icons.TouchIcon }}
+<!-- <link rel="apple-touch-icon" {{ with partial "func/dataURI.html" . }} {{ printf "href=%q" . | safeHTMLAttr }} {{ end }}> -->
+<link rel="apple-touch-icon" href="/{{ . | safeHTMLAttr }}">
+{{ end }}
+
+{{/* Mask Icon (Apple) */}}
+{{ if and .Icons.MaskIcon .ThemeColor }}
+<!-- <link rel="mask-icon" color="{{.ThemeColor}}" {{ with partial "func/dataURI.html" .Icons.MaskIcon }} {{ printf "href=%q" . | safeHTMLAttr }} {{ end }}> -->
+<link rel="mask-icon" color="{{.ThemeColor}}" href="/{{ .Icons.MaskIcon | safeHTMLAttr }}">
+{{ end }}

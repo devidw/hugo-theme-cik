@@ -1,3 +1,5 @@
+{{ partial "hooks/head/start.html" . }}
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -27,14 +29,6 @@
 {{ template "_internal/schema.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
-{{ if templates.Exists "partials/structureddata/include.html" }}
-{{ partial "structureddata/include.html" . }}
-{{ end }}
-
-{{ if templates.Exists "partials/oembed.html" }}
-{{ partial "oembed.html" . }}
-{{ end }}
-
 {{ range .AlternativeOutputFormats }}
 {{ printf `
 <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -51,10 +45,10 @@
 <meta name="theme-color" content="{{ . }}">
 {{ end }}
 
-{{ partial "head/icons.go.html" .Site.Params }}
+{{ partial "head/icons.html" .Site.Params }}
 
-{{ partial "head/style.go.html" . }}
+{{ partial "head/style.html" . }}
 
 {{ partial "head/math.html" . }}
 
-{{ partial "hooks/head.html" . }}
+{{ partial "hooks/head/end.html" . }}
