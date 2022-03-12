@@ -122,7 +122,7 @@ math: true
 
 ### Hooks
 
-You can inject custom HTML markup by creating hook partials files inside your projects `layouts/partials/hooks` directory.
+You can inject custom HTML markup by creating hook partial files inside your projects `layouts/partials/hooks` directory.
 
 For example to hook directly before the closing `</body>` tag you can create a `body/end.html` file in your `layouts/partials/hooks` directory. The full path in this case would be `layouts/partials/hooks/body/end.html`.
 
