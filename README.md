@@ -119,6 +119,21 @@ math: true
 
 * Enables [KaTeX](https://katex.org) math rendering for the given page -->
 
+
+### Hooks
+
+You can inject custom HTML markup by creating hook partials files inside your projects `layouts/partials/hooks` directory.
+
+For example to hook directly before the closing `</body>` tag you can create a `body/end.html` file in your `layouts/partials/hooks` directory. The full path in this case would be `layouts/partials/hooks/body/end.html`.
+
+Available hooks:
+
+* `head/start.html` to inject HTML right after the opening `<head>` tag
+* `head/end.html` to inject HTML right before the closing `</head>` tag
+* `body/start.html` to inject HTML right after the opening `<body>` tag
+* `body/end.html` to inject HTML right before the closing `</body>` tag
+
+
 ### Styles
 
 You can add additional custom styles to the Hugo theme via the `/assets/sass/_custom.sass` file.
