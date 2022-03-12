@@ -6,15 +6,18 @@ This Hugo theme focuses purely on content: Content is king. Layout and appearanc
 
 ## Installation
 
+<!--
 1. Install dependencies: The theme makes use of the following theme components, please follow the instructions of the projects `README.adoc` files:
    1. [Hugo Theme Component: Asciidoctor Skin](https://github.com/devidw/hugo-theme-component-asciidoctor-skin)
-2. Clone this theme to your `themes` directory
+-->
+
+1. Clone this theme to your `themes` directory
 
 ```cmd
 git submodule add https://github.com/devidw/hugo-theme-cik ./themes/hugo-theme-cik
 ```
 
-3. Add this theme to your list of themes inside your config-file
+2. Add this theme to your list of themes inside your config-file
    Using `config.toml`
 
 ```toml
@@ -35,6 +38,13 @@ theme:
   - "hugo-theme-cik"
   - "…"
 ```
+
+3. (Optional) Install additional hugo theme components to extend the theme. Some suggestions:
+   * https://github.com/devidw/hugo-theme-component-asciidoctor-skin
+   * https://github.com/devidw/hugo-theme-component-structured-data
+   * https://github.com/devidw/hugo-theme-component-webmentions
+   * https://github.com/devidw/hugo-theme-component-oembed
+   * Or create your own one using https://github.com/devidw/cookiecutter-hugo-theme-component
 
 ## Update
 
