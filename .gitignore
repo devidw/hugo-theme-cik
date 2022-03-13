@@ -1,4 +1,4 @@
 .DS_STORE
 
 resources
-exampleSite/resources
+.hugo_build.lock

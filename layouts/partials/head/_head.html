@@ -30,8 +30,9 @@
 {{ template "_internal/twitter_cards.html" . }}
 
 {{ range .AlternativeOutputFormats }}
+{{ $href := .Permalink | relURL }}
 {{ printf `
-<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type $href $.Site.Title | safeHTML }}
 {{ end }}
 
 {{ with $.Site.Params.Me }}
