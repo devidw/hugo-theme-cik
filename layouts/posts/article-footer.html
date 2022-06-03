@@ -1,11 +1,9 @@
 <footer>
     <address>
         <figure>
-            {{ partial "signature" . }}
-            {{/*
-                {{ with $.Site.Author.Signature }}
-                {{ end }}
-                */}}
+            {{ with $.Site.Author.Signature }}
+                {{ partial "signature" . }}
+            {{ end }}
             <figcaption>
                 {{ with .Site.Author.name }}
                 <span>
@@ -25,4 +23,4 @@
 
 <script>
     {{-  (resources.Get "js/article-initial-letter.js" | minify).Content | safeJS  -}}
-</script>  
+</script>
